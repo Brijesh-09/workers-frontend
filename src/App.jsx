@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 
-const API_BASE = process.env.API_BASE;
+
+const API_BASE = import.meta.env.VITE_API_BASE;
 
 export default function App() {
   const [code, setCode] = useState("");
