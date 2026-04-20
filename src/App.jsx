@@ -4,7 +4,9 @@ import { useState, useRef } from "react";
 const API_BASE = import.meta.env.VITE_API_BASE;
 
 export default function App() {
-  const [code, setCode] = useState("");
+  const [code, setCode] = useState(`Deno.serve((_req) => {
+  return new Response("Hello, World!");
+});`);
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState(null); // { workerId, url }
   const [logs, setLogs] = useState(null);
